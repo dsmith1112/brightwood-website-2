@@ -7,116 +7,51 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Brightwood AI Logo" class="logo" />
+  <header class="navbar">
+    <img src="assets/logo.png" alt="Brightwood AI Logo" class="logo" />
     <nav>
-      <ul>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#how-we-work">How We Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#ai-monitor">AI Monitor™</a></li>
-        <li><button id="contactBtn">Contact</button></li>
-      </ul>
+      <a href="#industries">Industries</a>
+      <a href="#how">How We Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#monitor">AI Monitor™</a>
+      <button id="contactBtn" class="contact-nav">Contact</button>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Where Intelligence Delivers Impact</h1>
-      <p>AI-powered solutions for real business outcomes.</p>
-      <div class="cta-buttons">
-        <a href="#assessment" class="button">Start Your Assessment</a>
-        <a href="#services" class="button">View Services</a>
-        <button id="contactBtnHero">Contact Us</button>
-      </div>
-    </section>
-
-    <section id="ai-monitor">
-      <h2>Introducing the AI Monitor™</h2>
-      <p><strong>Built-in Intelligence That Keeps Getting Smarter</strong></p>
-      <p>
-        Our proprietary AI Monitor™ continuously evaluates system performance post-implementation.
-        It allows us to proactively adjust and fine-tune solution design and deployment – ensuring
-        lasting business impact and visible KPI improvements.
-      </p>
-      <p>
-        It also keeps a pulse on the evolving AI landscape – tracking new models, platforms,
-        computing advancements, and emerging capabilities. This enables us to dynamically adapt and
-        recommend upgrades or complementary tools as they emerge.
-      </p>
-    </section>
-
-    <section id="industries">
-      <h2>Industries & Impact</h2>
-      <ul>
-        <li>Supply Chain</li>
-        <li>Inventory Optimization</li>
-        <li>Demand Planning</li>
-        <li>Procurement & Strategic Sourcing</li>
-        <li>Manufacturing & Planning</li>
-      </ul>
-    </section>
-
-    <section id="experience">
-      <h2>Our Experience</h2>
-      <p><strong>Seasoned Leadership, Proven Results</strong></p>
-      <ul>
-        <li>ERP and cloud implementations</li>
-        <li>Predictive & prescriptive planning</li>
-        <li>AI systems focused on measurable KPI gains</li>
-        <li>Global sourcing networks and large-scale transformation projects</li>
-      </ul>
-      <p>We combine technical excellence with business insight – so your AI solutions aren't just smart, they're strategic.</p>
-    </section>
-
-    <section id="how-we-work">
-      <h2>How We Work</h2>
-      <ul>
-        <li>AI Opportunity Assessment</li>
-        <li>AI Maturity Evaluation</li>
-        <li>Design & Solution Architecture</li>
-        <li>Model Training & Data Integration</li>
-        <li>Deployment & Change Management</li>
-        <li>Ongoing Monitoring (via AI Monitor™)</li>
-        <li>Continuous Improvement & Support</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Brightwood AI. All rights reserved.</p>
-  </footer>
+  <section class="hero">
+    <h1>Where Intelligence Delivers Impact</h1>
+    <p>AI-powered solutions for real business outcomes.</p>
+    <div class="cta-buttons">
+      <a href="#assessment" class="button">Start Your Assessment</a>
+      <a href="#services" class="button">View Services</a>
+      <button id="contactPopupBtn" class="button">Contact Us</button>
+    </div>
+  </section>
 
   <!-- Contact Modal -->
   <div id="contactModal" class="modal">
     <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <h2>Contact Us</h2>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Contact Brightwood AI</h2>
+      <p>Email: hello@brightwood.ai</p>
+      <p>Phone: (123) 456-7890</p>
+      <p>We’ll get back to you within 1 business day.</p>
     </div>
   </div>
 
+  <section id="services" class="section">
+    <h2>Introducing the AI Monitor™</h2>
+    <p>Real-time KPI tracking. Performance optimization. Continuous impact.</p>
+  </section>
+
   <script>
     const modal = document.getElementById("contactModal");
-    const contactBtn = document.getElementById("contactBtn");
-    const contactBtnHero = document.getElementById("contactBtnHero");
-    const closeModal = document.getElementById("closeModal");
+    const btn = document.getElementById("contactPopupBtn");
+    const close = document.getElementById("closeModal");
 
-    contactBtn.onclick = () => (modal.style.display = "block");
-    contactBtnHero.onclick = () => (modal.style.display = "block");
-    closeModal.onclick = () => (modal.style.display = "none");
-    window.onclick = (e) => {
+    btn.onclick = () => modal.style.display = "block";
+    close.onclick = () => modal.style.display = "none";
+    window.onclick = e => {
       if (e.target == modal) modal.style.display = "none";
     };
   </script>

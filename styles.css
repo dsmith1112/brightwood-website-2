@@ -1,75 +1,112 @@
-/* Import Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #0f0f0f;
-  color: #ffffff;
-  text-align: center;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
 }
 
-.hero {
-  padding: 100px 20px 60px;
-  background-color: #0f0f0f;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 40px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
 .logo {
-  max-width: 200px;
-  margin-bottom: 20px;
+  width: 150px;
+  margin-right: auto;
 }
 
-h1 {
-  font-size: 3rem;
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a,
+.contact-nav {
+  color: #ffb86f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 200px 20px 100px;
+}
+
+.hero h1 {
+  font-size: 42px;
   font-weight: 700;
-  color: #cc5500; /* Burnt Orange */
-  margin-bottom: 20px;
+  color: #cc5500;
 }
 
-p {
-  font-size: 1.2rem;
-  color: #dddddd;
-  margin-bottom: 40px;
+.hero p {
+  font-size: 18px;
+  margin: 20px auto;
 }
 
 .cta-buttons {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .button {
-  background-color: #cc5500; /* Burnt Orange */
+  background-color: #cc5500;
   color: #fff;
-  padding: 14px 28px;
+  border: none;
+  padding: 12px 22px;
+  font-size: 16px;
   font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
   border-radius: 6px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #aa4400;
+  background-color: #a84300;
 }
 
 .section {
-  padding: 60px 20px;
-  background-color: #111111;
+  padding: 60px 40px;
 }
 
-.section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #cc5500;
-  margin-bottom: 20px;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
 }
 
-.section p {
-  font-size: 1.1rem;
-  color: #cccccc;
-  max-width: 800px;
-  margin: 0 auto;
+.modal-content {
+  background-color: #1e1e1e;
+  margin: 10% auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.close {
+  color: #ffb86f;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
