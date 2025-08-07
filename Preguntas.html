@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brightwood AI</title>
+  <link rel="stylesheet" href="styles2.css" />
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/LogoOrange.png" alt="Brightwood AI Logo" class="logo" />
+    <h1>Where Intelligence Delivers Impact</h1>
+  </header>
+
+<h2 id="tituloPregunta"></h2>
+  <form id="formRespuestas" class="respuestas"></form>
+
+  <button id="btnAtras" class="oculto">Atrás</button>
+  <button id="btnSiguiente" disabled>Siguiente</button>
+
+  <p id="progresoTexto">0 de 0</p>
+  <progress id="progresoBarra" max="100" value="0"></progress>
+
+  <div id="resumen" class="oculto">
+    <h3>Resumen de tus respuestas</h3>
+    <ul id="listaResumen"></ul>
+    <button id="btnReiniciar">Reiniciar</button>
+  </div>
+
+  <script src="Datos.js"></script>
+  <script src="Form.js"></script>
+
+</body>
+</html>
